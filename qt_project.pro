@@ -27,13 +27,18 @@ CONFIG += c++11
 SOURCES += \
         infopage.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        trayicon.cpp
 
 HEADERS += \
         infopage.h \
-        mainwindow.h
+        mainwindow.h \
+        trayicon.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/pics">
+        <file>icons/flag_gb.png</file>
+    </qresource>
+</RCC>
