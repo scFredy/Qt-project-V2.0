@@ -7,8 +7,10 @@
 class QSQLiteWrap
 {
 public:
+    QSQLiteWrap();
     QSQLiteWrap(QString connection_name);
-    ~QSQLiteWrap();
+
+    ~QSQLiteWrap() { db.close(); }
 
 private:
     QSqlDatabase db;
@@ -17,4 +19,7 @@ private:
 public:
     QString GetConnectionName() const { return connection_name; }
     const QSqlDatabase& GetDatabase() const { return db; }
+
+private:
+    void SetupConnection(QString name);
 };
