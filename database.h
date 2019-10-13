@@ -8,8 +8,6 @@ class QSQLiteWrap
 {
 public:
     QSQLiteWrap();
-    QSQLiteWrap(QString connection_name);
-
     ~QSQLiteWrap() { db.close(); }
 
 private:
