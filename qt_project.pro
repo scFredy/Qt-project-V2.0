@@ -26,6 +26,7 @@ CONFIG += c++11
 
 SOURCES += \
         database.cpp \
+        grammarpage.cpp \
         infopage.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -33,8 +34,10 @@ SOURCES += \
 
 HEADERS += \
         database.h \
+        grammarpage.h \
         infopage.h \
         mainwindow.h \
+        test.h \
         trayicon.h
 
 # Default rules for deployment.

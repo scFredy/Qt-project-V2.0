@@ -3,6 +3,7 @@
 #include <QtWidgets>
 
 #include "infopage.h"
+#include "grammarpage.h"
 
 class MainWindow : public QMainWindow
 {
@@ -13,10 +14,11 @@ public:
     ~MainWindow();
 
 private:
-    QTabWidget* m_pMainTab;
-    QInfoPage*  m_pInfoPage;
+    QTabWidget*   m_pMainTab;
+    QInfoPage*    m_pInfoPage;
+    QGrammarPage* m_pGrammarPage;
 
-    QSettings*  m_pSettings;
+    QSettings*    m_pSettings;
 
 private:
     void SaveSettings();

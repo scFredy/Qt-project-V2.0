@@ -4,11 +4,13 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     setWindowTitle(tr("Qt project"));
-    m_pSettings = new QSettings("GG", "project");
-    m_pMainTab  = new QTabWidget();
-    m_pInfoPage = new QInfoPage();
+    m_pSettings    = new QSettings("GG", "project");
+    m_pMainTab     = new QTabWidget();
+    m_pInfoPage    = new QInfoPage();
+    m_pGrammarPage = new QGrammarPage();
 
     m_pMainTab->addTab(m_pInfoPage, tr("Info"));
+    m_pMainTab->addTab(m_pGrammarPage, tr("Grammar"));
 
     setCentralWidget(m_pMainTab);
     LoadSettings();

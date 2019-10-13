@@ -6,12 +6,17 @@ class QTrayIcon : public QSystemTrayIcon
 {
     Q_OBJECT
 public:
-    QTrayIcon(QWidget* parent = nullptr);
+    QTrayIcon(QApplication* app, QWidget* main_window);
     ~QTrayIcon();
 
 private:
-    QWidget* m_pParent;
+    QApplication* m_pApp;
+    QWidget*      m_pMainWnd;
+    QMenu*        m_pContMenu;
+
+private:
+    void SetupMenu();
 
 private slots:
-    void OnIconActivated(QSystemTrayIcon::ActivationReason reason);
+    void OnIconActivated(QSystemTrayIcon::ActivationReason reason); 
 };

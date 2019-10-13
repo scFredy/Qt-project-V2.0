@@ -1,8 +1,9 @@
 #pragma once
 
 #include <QSqlDatabase>
-#include <QDebug>
+#include <QSqlQuery>
 #include <QSqlError>
+#include <QDebug>
 
 class QSQLiteWrap
 {

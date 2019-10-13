@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 
     MainWindow window;
 
-    QTrayIcon icon(&window);
+    QTrayIcon icon(&a, &window);
     icon.setIcon(QIcon(":/pics/icons/flag_gb.png"));
     icon.show();
 
